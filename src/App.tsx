@@ -1,13 +1,12 @@
 import { useState } from "react";
-import "./App.css";
+
+import Landing from "./pages/Landing";
 
 function App() {
-  const [count, setCount] = useState<number>(2);
-
   return (
-    <div className="grid place-items-center">
-      <h1 className="text-3xl font-bold underline">SPACE TOURISM</h1>
-    </div>
+    <main className="grid place-items-center">
+      <Landing />
+    </main>
   );
 }
 
