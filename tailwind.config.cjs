@@ -8,6 +8,7 @@ module.exports = {
         navBg: "#151923",
         lightBlue: "rgb(208, 214, 249)",
         borderColor: "rgb(255, 255, 255, 0.6)",
+        alphaWhite: "rgba(255, 255, 255, 0.1)",
       },
       backgroundImage: {
         "home-page-desktop": "url('/assets/home/background-home-desktop.jpg')",
