@@ -15,10 +15,15 @@ const Navbar = () => {
         <img src="/assets/shared/logo.svg" alt="logo" />
       </div>
 
-      <ul className="hidden md:flex w-3/5 gap-6 text-white h-full items-center justify-around bg-navBg px-12">
+      <ul className="hidden md:flex w-3/5 gap-6 text-white h-full items-center justify-around backdrop-blur-2xl lg:mt-12 px-12 border lg:w-3/4	">
         {navbar.map(({ num, title }) => (
-          <li className="text-lg tracking-widest font-extralight h-full grid place-items-center  hover:border-b-2 border-b-borderColor cursor-pointer">
-            <a href="">{title}</a>
+          <li className="text-lg tracking-widest font-extralight ">
+            <a href="">
+              <span className="md:hidden lg:inline-block font-bold mr-3 ">
+                {num}
+              </span>
+              {title}
+            </a>
           </li>
         ))}
       </ul>
@@ -31,9 +36,9 @@ const Navbar = () => {
           <img src="/assets/shared/icon-hamburger.svg" alt="burger menu" />
         </div>
         {toggleNavbar && (
-          <div className="w-2/3 h-screen backdrop-blur-lg fixed top-0 right-0 flex flex-col px-8">
+          <div className="fixed inset-y-0	right-0 left-1/3 bg-alphaWhite backdrop-blur-lg px-8">
             <div
-              className="self-end my-10"
+              className="my-8 flex justify-end"
               onClick={() => setToggleNavbar(false)}
             >
               <img src="/assets/shared/icon-close.svg" alt="logo" />
