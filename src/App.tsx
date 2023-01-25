@@ -1,11 +1,12 @@
 import { useState } from "react";
+import Navbar from "./components/Navbar";
 
-import Landing from "./pages/Landing";
+import Landing from "./containers/Landing";
 
 function App() {
   return (
-    <main className="grid place-items-center">
-      <Landing />
+    <main className="min-h-screen bg-home-page-mobile bg-cover bg-center	">
+      <Navbar />
     </main>
   );
 }
