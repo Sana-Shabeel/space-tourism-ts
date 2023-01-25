@@ -10,12 +10,20 @@ const Navbar = () => {
     { num: "03", title: "TECHNOLOGY" },
   ];
   return (
-    <nav className="flex justify-between items-center py-4 px-8 font-barlowCond">
-      <div>
+    <nav className="flex justify-between items-center font-barlowCond md:h-24 pl-10">
+      <div className="">
         <img src="/assets/shared/logo.svg" alt="logo" />
       </div>
 
-      <div>
+      <ul className="hidden md:flex w-3/5 gap-6 text-white h-full items-center justify-around bg-navBg px-12">
+        {navbar.map(({ num, title }) => (
+          <li className="text-lg tracking-widest font-extralight h-full grid place-items-center  hover:border-b-2 border-b-borderColor cursor-pointer">
+            <a href="">{title}</a>
+          </li>
+        ))}
+      </ul>
+
+      <div className="md:hidden">
         <div
           className="grid place-items-center cursor-pointer"
           onClick={() => setToggleNavbar(true)}
