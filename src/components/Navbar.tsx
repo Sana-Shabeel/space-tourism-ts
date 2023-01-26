@@ -10,29 +10,13 @@ const Navbar = () => {
     { num: "03", title: "TECHNOLOGY" },
   ];
   return (
-    <nav className="flex justify-between items-center font-barlowCond md:h-24 pl-10">
-      <div className="">
+    <nav className="py-6 px-4 flex justify-between items-center font-barlowCond md:h-24">
+      <div className="w-10 md:w-12">
         <img src="/assets/shared/logo.svg" alt="logo" />
       </div>
 
-      <ul className="hidden md:flex w-3/5 gap-6 text-white h-full items-center justify-around backdrop-blur-2xl lg:mt-12 px-12 border lg:w-3/4	">
-        {navbar.map(({ num, title }) => (
-          <li className="text-lg tracking-widest font-extralight ">
-            <a href="">
-              <span className="md:hidden lg:inline-block font-bold mr-3 ">
-                {num}
-              </span>
-              {title}
-            </a>
-          </li>
-        ))}
-      </ul>
-
       <div className="md:hidden">
-        <div
-          className="grid place-items-center cursor-pointer"
-          onClick={() => setToggleNavbar(true)}
-        >
+        <div className="cursor-pointer" onClick={() => setToggleNavbar(true)}>
           <img src="/assets/shared/icon-hamburger.svg" alt="burger menu" />
         </div>
         {toggleNavbar && (
@@ -44,13 +28,13 @@ const Navbar = () => {
               <img src="/assets/shared/icon-close.svg" alt="logo" />
             </div>
 
-            <ul className="my-10">
+            <ul className="mt-12 sm:ml-8 sm:mt-16">
               {navbar.map(({ num, title }, idx) => (
                 <li
                   key={idx}
-                  className="text-white my-6 text-xl tracking-linkSpace"
+                  className="text-white ml-4 my-10 text-xl tracking-linkSpace"
                 >
-                  <a href={`#${title}`} className="font-light">
+                  <a href={`#${title}`} className="font-extralight">
                     <span className="mr-4 font-semibold">{num}</span>
                     {title}
                   </a>
