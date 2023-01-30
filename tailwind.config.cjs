@@ -3,11 +3,15 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      height: {
+        "1px": "1px",
+      },
       colors: {
         dark: "hsl(230, 35%, 7%)",
         navBg: "#151923",
         lightBlue: "rgb(208, 214, 249)",
-        borderColor: "rgb(255, 255, 255, 0.6)",
+        bottomBorder: "rgb(255, 255, 255, 0.6)",
+        line: "rgb(255, 255, 255, 0.3)",
         alphaWhite: "rgba(255, 255, 255, 0.1)",
       },
       backgroundImage: {
