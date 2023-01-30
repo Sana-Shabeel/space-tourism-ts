@@ -36,6 +36,7 @@ module.exports = {
       },
       letterSpacing: {
         linkSpace: "3px",
+        h1space: "0.2em",
       },
     },
   },
