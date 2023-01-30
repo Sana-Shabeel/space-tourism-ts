@@ -38,6 +38,9 @@ module.exports = {
         linkSpace: "3px",
         h1space: "0.2em",
       },
+      boxShadow: {
+        "3xl": "0px 0px 0px 40px rgba(0,0,0,0.6)",
+      },
     },
   },
   plugins: [],
