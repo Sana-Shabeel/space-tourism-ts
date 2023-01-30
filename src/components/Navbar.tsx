@@ -10,12 +10,14 @@ const Navbar = () => {
     { num: "03", title: "TECHNOLOGY" },
   ];
   return (
-    <nav className="text-white flex justify-between items-center font-barlowCond md:h-24 mx-8 py-6 md:pl-4 md:mx-0 md:py-0">
+    <nav className="text-white flex justify-between items-center font-barlowCond p-6 md:p-0 md:h-24 md:pl-4">
       <div className="w-10 md:w-12">
         <img src="/assets/shared/logo.svg" alt="logo" />
       </div>
 
-      <ul className="hidden md:flex w-3/5 gap-6 h-full items-center justify-around bg-alphaWhite backdrop-blur-lg lg:mt-12 px-12 lg:w-3/4	">
+      <div className=" hidden lg:block w-1/3 bg-line h-1px relative left-6  z-40 "></div>
+
+      <ul className="hidden md:flex w-3/5 gap-6 h-full items-center justify-around bg-alphaWhite backdrop-blur-lg  px-12 lg:w-2/3	">
         {navbar.map(({ num, title }) => (
           <li className="text-lg tracking-widest font-extralight h-full flex justify-center items-center hover:border-b-2">
             <a href="">
