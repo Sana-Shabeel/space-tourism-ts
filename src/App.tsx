@@ -5,7 +5,7 @@ import Landing from "./pages/Landing";
 
 function App() {
   return (
-    <main className="min-h-screen bg-home-page-mobile md:bg-home-page-tablet lg:bg-home-page-desktop bg-cover bg-center">
+    <main className="min-h-screen bg-home-page-mobile sm:bg-home-page-tablet lg:bg-home-page-desktop bg-cover bg-center">
       <Navbar />
     </main>
   );
