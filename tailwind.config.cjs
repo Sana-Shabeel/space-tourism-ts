@@ -3,6 +3,16 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontSize: {
+        fs900: "9.375rem",
+        fs800: "6.25rem",
+        fs700: "3.5rem",
+        fs600: "2rem",
+        fs500: "1.75rem",
+        fs400: "1.125rem",
+        fs300: "1rem",
+        fs200: "0.875rem",
+      },
       height: {
         "1px": "1px",
       },
