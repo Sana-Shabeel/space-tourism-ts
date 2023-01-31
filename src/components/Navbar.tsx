@@ -10,7 +10,7 @@ const Navbar = () => {
     { num: "03", title: "TECHNOLOGY" },
   ];
   return (
-    <nav className="flex items-center justify-between p-6 font-barlowCond text-white md:h-24 md:p-0 md:pl-4">
+    <nav className="flex items-center justify-between p-6 font-barlowCond text-white md:h-24 md:p-0 md:pl-4 lg:mt-6">
       <div className="w-10 md:w-12">
         <img src="/assets/shared/logo.svg" alt="logo" />
       </div>
