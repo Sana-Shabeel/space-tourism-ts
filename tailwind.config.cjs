@@ -3,6 +3,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      width: {
+        "450px": "28.125rem",
+      },
       gridTemplateRows: {
         home: "min-content 1fr",
       },
