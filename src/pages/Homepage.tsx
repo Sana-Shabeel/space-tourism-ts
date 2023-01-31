@@ -3,10 +3,10 @@ import Navbar from "../components/Navbar";
 
 const Landing = () => {
   return (
-    <section className="min-h-screen  bg-home-page-mobile bg-cover bg-center text-lightBlue sm:bg-home-page-tablet lg:bg-home-page-desktop ">
+    <section className="grid min-h-screen grid-rows-home  bg-home-page-mobile bg-cover bg-center text-lightBlue sm:bg-home-page-tablet lg:bg-home-page-desktop ">
       <Navbar />
-      <div className="flex min-h-screen flex-col ">
-        <div className="m-auto mt-6 w-80 md:w-3/5">
+      <div className="flex h-full flex-col pt-6 ">
+        <div className="m-auto w-80 md:w-3/5">
           <h1 className="text-center font-barlowCond text-fs400 tracking-h1space">
             SO, YOU WANT TO TRAVEL TO{" "}
             <span className="block font-bellefair text-fs750 text-white md:text-fs900">
