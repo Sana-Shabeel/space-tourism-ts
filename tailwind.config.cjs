@@ -3,9 +3,13 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      gridTemplateRows: {
+        home: "min-content 1fr",
+      },
       fontSize: {
         fs900: "9.375rem",
         fs800: "6.25rem",
+        fs750: "5rem",
         fs700: "3.5rem",
         fs600: "2rem",
         fs500: "1.75rem",
@@ -27,8 +31,7 @@ module.exports = {
       backgroundImage: {
         "home-page-desktop": "url('/assets/home/background-home-desktop.jpg')",
         "home-page-tablet": "url('/assets/home/background-home-tablet.jpg')",
-        "home-page-mobile":
-          "url('/assets/destination/background-destination-mobile.jpg')",
+        "home-page-mobile": "url('/assets/home/background-home-mobile.jpg')",
       },
       fontFamily: {
         bellefair: ["Bellefair", "serif"],
@@ -36,7 +39,7 @@ module.exports = {
         barlow: ["Barlow", "sans-serif"],
       },
       letterSpacing: {
-        linkSpace: "3px",
+        "3px": "3.38px",
         h1space: "0.2em",
       },
       boxShadow: {
