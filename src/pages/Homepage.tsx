@@ -1,28 +1,32 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
 
 const Landing = () => {
   return (
-    <section className="h-screen flex flex-col justify-evenly text-lightBlue mt-6">
-      <div>
-        <h1 className="font-barlowCond text-fs400 text-center tracking-h1space">
-          SO, YOU WANT TO TRAVEL TO{" "}
-          <span className="text-fs800 block text-white font-bellefair">
-            SPACE
-          </span>
-        </h1>
-        <div className="mx-6">
-          <p className="text-fs200 text-center leading-7	tracking-wide font-extralight">
-            Let’s face it; if you want to go to space, you might as well
-            genuinely go to outer space and not hover kind of on the edge of it.
-            Well sit back, and relax because we’ll give you a truly out of this
-            world experience!
-          </p>
+    <section className="min-h-screen  bg-home-page-mobile bg-cover bg-center text-lightBlue sm:bg-home-page-tablet lg:bg-home-page-desktop ">
+      <Navbar />
+      <div className="flex min-h-screen flex-col ">
+        <div className="m-auto mt-6 w-80 md:w-3/5">
+          <h1 className="text-center font-barlowCond text-fs400 tracking-h1space">
+            SO, YOU WANT TO TRAVEL TO{" "}
+            <span className="block font-bellefair text-fs750 text-white md:text-fs900">
+              SPACE
+            </span>
+          </h1>
+          <div>
+            <p className="text-center text-fs200 font-extralight	leading-7 tracking-wide">
+              Let’s face it; if you want to go to space, you might as well
+              genuinely go to outer space and not hover kind of on the edge of
+              it. Well sit back, and relax because we’ll give you a truly out of
+              this world experience!
+            </p>
+          </div>
         </div>
-      </div>
-      <div className="w-40 h-40 rounded-full bg-white grid place-items-center mx-auto my-14">
-        <span className="text-dark font-bellefair text-fs400 tracking-widest">
-          EXPLORE
-        </span>
+        <div className="mx-auto my-14 grid h-40 w-40 place-items-center rounded-full bg-white md:h-60 md:w-60 ">
+          <span className="font-bellefair text-fs400 tracking-widest text-dark md:text-fs600">
+            EXPLORE
+          </span>
+        </div>
       </div>
     </section>
   );
