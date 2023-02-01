@@ -3,9 +3,6 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      width: {
-        "450px": "28.125rem",
-      },
       gridTemplateRows: {
         home: "min-content 1fr",
       },
@@ -27,7 +24,6 @@ module.exports = {
         dark: "hsl(230, 35%, 7%)",
         navBg: "#151923",
         lightBlue: "rgb(208, 214, 249)",
-        bottomBorder: "rgb(255, 255, 255, 0.6)",
         line: "rgb(255, 255, 255, 0.3)",
         alphaWhite: "rgba(255, 255, 255, 0.1)",
       },
@@ -46,7 +42,7 @@ module.exports = {
         h1space: "0.2em",
       },
       boxShadow: {
-        "3xl": "0px 0px 0px 40px rgba(0,0,0,0.6)",
+        "3xl": "0px 0px 0px 55px rgba(255, 255, 255, 0.1)",
       },
     },
   },
