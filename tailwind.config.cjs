@@ -17,9 +17,6 @@ module.exports = {
         fs300: "1rem",
         fs200: "0.875rem",
       },
-      height: {
-        "1px": "1px",
-      },
       colors: {
         dark: "hsl(230, 35%, 7%)",
         navBg: "#151923",
@@ -31,6 +28,12 @@ module.exports = {
         "home-page-desktop": "url('/assets/home/background-home-desktop.jpg')",
         "home-page-tablet": "url('/assets/home/background-home-tablet.jpg')",
         "home-page-mobile": "url('/assets/home/background-home-mobile.jpg')",
+        "destination-desktop":
+          "url('/assets/destination/background-destination-desktop.jpg')",
+        "destination-tablet":
+          "url('/assets/destination/background-destination-tablet.jpg')",
+        "destination-mobile":
+          "url('/assets/destination/background-destination-mobile.jpg')",
       },
       fontFamily: {
         bellefair: ["Bellefair", "serif"],
@@ -39,6 +42,7 @@ module.exports = {
       },
       letterSpacing: {
         "3px": "3.38px",
+        "2xl": "0.17em",
         h1space: "0.2em",
       },
       boxShadow: {
