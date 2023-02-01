@@ -3,10 +3,10 @@ import Navbar from "../components/Navbar";
 
 const Landing = () => {
   return (
-    <section className="grid min-h-screen grid-rows-home  bg-home-page-mobile bg-cover bg-center text-lightBlue sm:bg-home-page-tablet lg:bg-home-page-desktop ">
+    <section className="grid min-h-screen grid-rows-home bg-home-page-mobile bg-cover bg-center text-lightBlue sm:bg-home-page-tablet lg:bg-home-page-desktop">
       <Navbar />
-      <div className="flex h-full flex-col pt-6 lg:flex-row ">
-        <div className="m-auto w-80 md:w-3/5 lg:w-450px">
+      <div className="flex h-full flex-col pt-6 lg:flex-row">
+        <div className="m-auto w-80 md:w-3/5 lg:w-[28.125rem]">
           <h1 className="text-center font-barlowCond text-fs400 tracking-h1space lg:text-left">
             SO, YOU WANT TO TRAVEL TO{" "}
             <span className="block font-bellefair text-fs750 text-white md:text-fs900">
@@ -22,7 +22,7 @@ const Landing = () => {
             </p>
           </div>
         </div>
-        <div className="mx-auto my-14 grid h-40 w-40 place-items-center rounded-full bg-white md:h-60 md:w-60 lg:h-72	lg:w-72	lg:self-end">
+        <div className="mx-auto my-14 grid h-40 w-40 cursor-pointer place-items-center rounded-full bg-white transition duration-300 ease-in-out hover:shadow-3xl	md:h-60	md:w-60 lg:h-[17.125rem] lg:w-[17.125rem] lg:self-end">
           <span className="font-bellefair text-fs400 tracking-widest text-dark md:text-fs600">
             EXPLORE
           </span>
