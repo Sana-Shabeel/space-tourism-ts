@@ -15,7 +15,7 @@ const Navbar = () => {
         <img src="/assets/shared/logo.svg" alt="logo" />
       </div>
 
-      <div className=" relative left-6 z-40 hidden h-1px w-1/3 bg-line lg:block "></div>
+      <div className=" relative left-6 z-40 hidden h-[1px] w-1/3 bg-line lg:block "></div>
 
       <ul className="hidden h-full w-3/5 items-center justify-around gap-6 bg-alphaWhite px-12 backdrop-blur-lg  md:flex lg:w-2/3	">
         {navbar.map(({ num, title }) => (
