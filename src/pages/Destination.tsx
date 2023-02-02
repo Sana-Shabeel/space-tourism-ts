@@ -10,53 +10,65 @@ const Destination = () => {
   );
   const [destination, setDestination] =
     useState<Root["destinations"]>(destinationData);
+  const [image, setImage] = useState<string>("");
 
   const pickDestinationHandler = (planet: string) => {
     console.log("clicked");
+
+    const result = destinationData.filter((obj) => obj.name === planet);
 
     setDestination(destinationData.filter((obj) => obj.name === planet));
   };
 
   return (
-    <section className="bg-destination-mobile bg-cover bg-center pb-10 sm:bg-destination-tablet">
+    <section className="min-h-screen bg-destination-mobile bg-cover bg-center sm:bg-destination-tablet  lg:bg-destination-desktop ">
       <Navbar />
 
-      <h2 className="text-center font-barlowCond text-fs300 font-light uppercase tracking-2xl text-white">
+      <h2 className="my-10 text-center font-barlowCond text-fs300 font-light uppercase tracking-2xl text-white md:ml-8 md:text-left md:text-fs400">
         <span className="mr-2 font-bold text-line">01</span>
         Pick your destination
       </h2>
 
-      <div className="mx-auto my-6 w-44">
-        <img src="/assets/destination/image-moon.png" alt="" />
-      </div>
-
-      <ul className="mx-auto flex w-60 justify-between text-lightBlue">
-        {["Moon", "Mars", "Europa", "Titan"].map((item, idx) => (
-          <li
-            className="pb-2 font-barlowCond text-fs300 font-light uppercase tracking-2xl hover:border-gray-600"
-            onClick={() => pickDestinationHandler(item)}
-            key={idx}
-          >
-            {item}
-          </li>
-        ))}
-      </ul>
-
-      {destination.map((item, idx) => (
-        <div className="mx-auto w-80" key={idx}>
-          <h1 className="my-4 text-center font-bellefair text-fs700 font-light uppercase text-white">
-            {item.name}
-          </h1>
-          <p className="my-6 text-center text-fs300 font-extralight leading-6 text-lightBlue">
-            {item.description}
-          </p>
-          <div className="my-6 h-[1px] bg-line"></div>
-          <div>
-            <Distance title={"AVG. DISTANCE"} description={item.distance} />
-            <Distance title={"Est. travel time"} description={item.travel} />
-          </div>
+      <div className="lg:flex lg:justify-evenly">
+        <div className="mx-auto my-10 w-44 md:my-8 md:w-[18.75rem] lg:mx-0 lg:w-[27.8125rem]">
+          {destination.map((img) => (
+            <img src={img.images.png} alt="" />
+          ))}
         </div>
-      ))}
+
+        <div className="lg:w-[27.8125rem]">
+          <ul className="mx-auto flex w-60 justify-between text-lightBlue lg:mx-0">
+            {["Moon", "Mars", "Europa", "Titan"].map((item, idx) => (
+              <li
+                className="pb-2 font-barlowCond text-fs300 font-light uppercase tracking-2xl hover:border-gray-600"
+                onClick={() => pickDestinationHandler(item)}
+                key={idx}
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
+
+          {destination.map((item, idx) => (
+            <div className="mx-auto w-80 md:w-3/4 lg:w-full" key={idx}>
+              <h1 className="my-4 text-center font-bellefair text-fs700 font-light uppercase text-white md:text-fs750 lg:text-left lg:text-fs800">
+                {item.name}
+              </h1>
+              <p className="lg:fs400 my-6 text-center text-fs300 font-extralight leading-6 text-lightBlue lg:text-left">
+                {item.description}
+              </p>
+              <div className="my-12 h-[1px] bg-line lg:my-10"></div>
+              <div className="flex flex-col pr-10 md:flex-row md:justify-around lg:justify-between">
+                <Distance title={"AVG. DISTANCE"} description={item.distance} />
+                <Distance
+                  title={"Est. travel time"}
+                  description={item.travel}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
