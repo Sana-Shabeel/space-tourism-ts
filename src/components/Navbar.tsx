@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Navbar = () => {
   const [toggleNavbar, setToggleNavbar] = useState<boolean>(false);
+  const [isActive, setIsActive] = useState("00");
 
   const navbar = [
     { num: "00", title: "HOME" },
@@ -19,8 +20,11 @@ const Navbar = () => {
         <ul className="hidden h-full w-3/5 items-center justify-around gap-6 bg-alphaWhite px-12 backdrop-blur-lg  md:flex lg:w-2/3	">
           {navbar.map(({ num, title }, idx) => (
             <li
-              className="hover:border-box flex h-full items-center justify-center border-stone-400 text-lg font-extralight tracking-widest hover:border-b-2"
+              className={`${
+                isActive === num ? "border-b-2 border-white" : ""
+              } flex h-full items-center justify-center border-stone-400 text-lg font-extralight tracking-widest hover:border-b-2`}
               key={idx}
+              onClick={() => setIsActive(num)}
             >
               <a href="">
                 <span className="mr-3 font-bold md:hidden lg:inline-block">
