@@ -58,7 +58,7 @@ const Destination = () => {
                 {item.description}
               </p>
               <div className="my-12 h-[1px] bg-line lg:my-10"></div>
-              <div className="flex flex-col pr-10 md:flex-row md:justify-around lg:justify-between">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:pr-0 md:justify-around lg:justify-between ">
                 <Distance title={"AVG. DISTANCE"} description={item.distance} />
                 <Distance
                   title={"Est. travel time"}
