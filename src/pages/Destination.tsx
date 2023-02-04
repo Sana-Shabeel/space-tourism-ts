@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import data from "../data/data.json";
 import { Root } from "../model";
 import Navbar from "../components/Navbar";
@@ -8,17 +8,22 @@ const Destination = () => {
   const [destinationData, setDestinationData] = useState<Root["destinations"]>(
     data.destinations
   );
+
   const [destination, setDestination] =
     useState<Root["destinations"]>(destinationData);
-  const [image, setImage] = useState<string>("");
+
+  const [IsActive, setIsActive] = useState("Moon");
 
   const pickDestinationHandler = (planet: string) => {
     console.log("clicked");
 
-    const result = destinationData.filter((obj) => obj.name === planet);
-
     setDestination(destinationData.filter((obj) => obj.name === planet));
+    setIsActive(planet);
   };
+
+  useEffect(() => {
+    pickDestinationHandler("Moon");
+  }, []);
 
   return (
     <section className="min-h-screen bg-destination-mobile bg-cover bg-center sm:bg-destination-tablet  lg:bg-destination-desktop ">
@@ -37,17 +42,19 @@ const Destination = () => {
         </div>
 
         <div className="lg:w-[27.8125rem]">
-          <ul className="mx-auto flex w-60 justify-between text-lightBlue lg:mx-0">
+          <div className="mx-auto flex h-8 w-60 justify-between text-lightBlue lg:mx-0">
             {["Moon", "Mars", "Europa", "Titan"].map((item, idx) => (
-              <li
-                className="pb-2 font-barlowCond text-fs300 font-light uppercase tracking-2xl hover:border-gray-600"
+              <button
+                className={`${
+                  IsActive === item ? "border-b-2 text-white" : ""
+                } tracking-2x box-border border-white pb-2 font-barlowCond text-fs300 font-light uppercase hover:border-b-2 hover:border-gray-600 `}
                 onClick={() => pickDestinationHandler(item)}
                 key={idx}
               >
                 {item}
-              </li>
+              </button>
             ))}
-          </ul>
+          </div>
 
           {destination.map((item, idx) => (
             <div className="mx-auto w-80 md:w-3/4 lg:w-full" key={idx}>
