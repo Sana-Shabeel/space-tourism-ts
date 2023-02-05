@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { crew } from "../data/data.json";
 import { Root } from "../model";
 import Navbar from "../components/Navbar";
@@ -10,23 +10,28 @@ const Crew = () => {
   const [IsActive, setIsActive] = useState("Douglas Hurley");
 
   const pickCrewMembers = (crewName: string) => {
-    setCrewMember(crewData.filter((crew) => crew.name === crewName));
     setIsActive(crewName);
+    setCrewMember(crewData.filter((crew) => crew.name === crewName));
   };
+
+  useEffect(() => {
+    pickCrewMembers("Douglas Hurley");
+  }, []);
+
   return (
-    <section className="bg-crew-mobile bg-cover bg-center text-white">
+    <section className="grid min-h-screen grid-rows-home bg-crew-mobile bg-cover bg-center text-white md:h-max md:bg-crew-tablet">
       <Navbar />
       <h1 className="my-2 text-center font-barlowCond text-fs300 font-light uppercase tracking-2xl text-white md:ml-8 md:text-left md:text-fs400">
         <span className="mr-2 font-bold text-line">02</span>
         Meet your crew
       </h1>
 
-      <div className="flex flex-col-reverse">
+      <div className="md:flex md:flex-col-reverse">
         {/* IMAGE */}
         {crewMember.map((img) => (
-          <div className="mx-auto w-80">
+          <div className="my-4 mx-auto w-80 md:w-auto md:self-end">
             <img
-              className="mx-auto h-56 w-80 object-contain object-center md:h-2/5 md:w-2/3"
+              className="mx-auto h-56 w-80 object-contain object-center md:h-[33.25rem] md:w-auto md:object-cover"
               src={img.images.png}
               alt={`a picture of ${img.name}`}
             />
@@ -35,12 +40,12 @@ const Crew = () => {
         ))}
 
         {/* BIO AND NAME */}
-        <div className="mx-auto mt-2 flex w-80 flex-col-reverse md:flex-col">
+        <div className="mx-auto mt-2 flex w-80 flex-col-reverse md:w-3/5 md:flex-col">
           {crewMember.map((data) => (
             <div>
               <div className="text-center font-bellefair font-light uppercase tracking-wide">
                 <h3 className="mb-2 text-fs300 text-line">{data.role}</h3>
-                <h2 className="text-[1.5rem]">{data.name}</h2>
+                <h2 className="text-[1.5rem] md:text-fs600">{data.name}</h2>
               </div>
               <p className="my-6 text-center text-fs200 font-extralight leading-6 text-lightBlue">
                 {data.bio}
