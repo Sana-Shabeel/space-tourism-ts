@@ -19,19 +19,19 @@ const Crew = () => {
   }, []);
 
   return (
-    <section className="grid min-h-screen grid-rows-home bg-crew-mobile bg-cover bg-center text-white md:h-max md:bg-crew-tablet">
+    <section className="grid min-h-screen  bg-crew-mobile bg-cover bg-center text-white md:h-max md:bg-crew-tablet">
       <Navbar />
       <h1 className="my-2 text-center font-barlowCond text-fs300 font-light uppercase tracking-2xl text-white md:ml-8 md:text-left md:text-fs400">
         <span className="mr-2 font-bold text-line">02</span>
         Meet your crew
       </h1>
 
-      <div className="md:flex md:flex-col-reverse">
+      <div className="md:flex md:flex-col-reverse lg:mx-auto lg:w-11/12 lg:flex-row-reverse lg:justify-around">
         {/* IMAGE */}
         {crewMember.map((img) => (
           <div className="my-4 mx-auto w-80 md:w-auto md:self-end">
             <img
-              className="mx-auto h-56 w-80 object-contain object-center md:h-[33.25rem] md:w-auto md:object-cover"
+              className="mx-auto h-56 w-80 object-contain object-center md:h-[33.25rem] md:w-auto md:object-cover lg:w-[35rem] lg:object-contain"
               src={img.images.png}
               alt={`a picture of ${img.name}`}
             />
@@ -40,19 +40,26 @@ const Crew = () => {
         ))}
 
         {/* BIO AND NAME */}
-        <div className="mx-auto mt-2 flex w-80 flex-col-reverse md:w-3/5 md:flex-col">
+        <div
+          className="mx-auto mt-2 flex w-80 flex-col-reverse md:w-3/5 md:flex-col 
+        lg:w-[39rem]"
+        >
           {crewMember.map((data) => (
-            <div>
-              <div className="text-center font-bellefair font-light uppercase tracking-wide">
-                <h3 className="mb-2 text-fs300 text-line">{data.role}</h3>
-                <h2 className="text-[1.5rem] md:text-fs600">{data.name}</h2>
+            <div className="lg:mt-6 lg:flex lg:flex-col lg:justify-center">
+              <div className="text-center font-bellefair font-light uppercase tracking-wide lg:text-left">
+                <h3 className="mb-2 text-fs300 text-line lg:text-fs600">
+                  {data.role}
+                </h3>
+                <h2 className="text-[1.5rem] md:text-fs600 lg:text-fs700">
+                  {data.name}
+                </h2>
               </div>
-              <p className="my-6 text-center text-fs200 font-extralight leading-6 text-lightBlue">
+              <p className="my-6 text-center text-fs200 font-extralight leading-6 text-lightBlue lg:w-[27.75rem] lg:text-left">
                 {data.bio}
               </p>
             </div>
           ))}
-          <div className="mx-auto my-6 flex w-20 justify-between">
+          <div className="mx-auto my-6 flex w-20 justify-between lg:w-full lg:justify-start lg:gap-6">
             {[
               "Douglas Hurley",
               "Mark Shuttleworth",
