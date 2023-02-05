@@ -29,7 +29,7 @@ const Crew = () => {
       <div className="md:flex md:flex-col-reverse lg:mx-auto lg:w-11/12 lg:flex-row-reverse lg:justify-around">
         {/* IMAGE */}
         {crewMember.map((img) => (
-          <div className="my-4 mx-auto w-80 md:w-auto md:self-end">
+          <div className="my-4 mx-auto w-80 md:w-auto md:self-end lg:m-0">
             <img
               className="mx-auto h-56 w-80 object-contain object-center md:h-[33.25rem] md:w-auto md:object-cover lg:w-[35rem] lg:object-contain"
               src={img.images.png}
