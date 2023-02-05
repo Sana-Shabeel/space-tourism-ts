@@ -21,8 +21,8 @@ const Navbar = () => {
           {navbar.map(({ num, title }, idx) => (
             <li
               className={`${
-                isActive === num ? "border-b-2 border-white" : ""
-              } flex h-full items-center justify-center border-stone-400 text-lg font-extralight tracking-widest hover:border-b-2`}
+                isActive === num ? "border-b-2" : ""
+              } flex h-full items-center justify-center border-white text-lg font-extralight tracking-widest hover:border-b-2 hover:border-stone-400`}
               key={idx}
               onClick={() => setIsActive(num)}
             >
