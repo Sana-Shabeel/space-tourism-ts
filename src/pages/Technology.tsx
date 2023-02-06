@@ -52,7 +52,7 @@ const Technology = () => {
                     ? img.images.portrait
                     : img.images.landscape
                 }
-                alt={img.name}
+                alt={`a picture of ${img.name}`}
               />
             ))}
           </div>
