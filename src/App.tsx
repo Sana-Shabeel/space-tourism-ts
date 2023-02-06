@@ -7,7 +7,7 @@ import Technology from "./pages/Technology";
 function App() {
   return (
     <main>
-      <Technology />
+      <Destination />
     </main>
   );
 }

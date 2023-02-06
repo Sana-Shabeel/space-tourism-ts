@@ -48,7 +48,7 @@ const Destination = () => {
               <button
                 className={`${
                   IsActive === item ? "border-b-2 text-white" : ""
-                } tracking-2x box-border border-white pb-2 font-barlowCond text-fs300 font-light uppercase hover:border-b-2 hover:border-gray-600 `}
+                } box-border border-white pb-2 font-barlowCond text-fs300 font-light uppercase hover:border-b-2 hover:border-gray-600 `}
                 onClick={() => pickDestinationHandler(item)}
                 key={idx}
               >
@@ -63,7 +63,7 @@ const Destination = () => {
               <h1 className="my-4 text-center font-bellefair text-fs700 font-light uppercase text-white md:text-fs750 lg:text-left lg:text-fs800">
                 {item.name}
               </h1>
-              <p className="lg:fs400 my-6 text-center text-fs300 font-extralight leading-6 text-lightBlue lg:text-left">
+              <p className="my-6 text-center text-fs300 font-extralight leading-6 text-lightBlue lg:text-left">
                 {item.description}
               </p>
               <div className="my-12 h-[1px] bg-line lg:my-10"></div>

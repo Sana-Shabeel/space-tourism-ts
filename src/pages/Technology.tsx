@@ -82,7 +82,7 @@ const Technology = () => {
                     {item.name}
                   </h2>
                 </div>
-                <p className="lg:h-fs600 my-6 text-center text-fs200 font-extralight leading-6 text-lightBlue lg:h-24 lg:w-[27.75rem] lg:text-left">
+                <p className="my-6 text-center text-fs200 font-extralight leading-6 text-lightBlue lg:h-24 lg:w-[27.75rem] lg:text-left">
                   {item.description}
                 </p>
               </div>
