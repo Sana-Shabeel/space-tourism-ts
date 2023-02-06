@@ -20,7 +20,7 @@ const Technology = () => {
   }, []);
 
   return (
-    <section className="grid min-h-screen grid-rows-home bg-technology-mobile">
+    <section className="min-h-screen bg-technology-mobile bg-cover bg-center">
       <Navbar />
 
       <div className="grid">
@@ -36,7 +36,7 @@ const Technology = () => {
           </div>
           <div className="mx-auto my-6 flex w-80 flex-col gap-6 text-white">
             {/* TABS */}
-            <div className="mx-auto flex w-40 items-center justify-between text-white">
+            <div className="mx-auto mt-8 flex w-40 items-center justify-between text-white">
               {techNameArr.map((name, idx) => (
                 <button
                   className={`${
