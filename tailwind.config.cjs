@@ -11,6 +11,7 @@ module.exports = {
         fs800: "6.25rem",
         fs750: "5rem",
         fs700: "3.5rem",
+        fs650: "2.5rem",
         fs600: "2rem",
         fs500: "1.75rem",
         fs450: "1.5rem",
