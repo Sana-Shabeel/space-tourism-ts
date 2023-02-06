@@ -20,7 +20,7 @@ const Technology = () => {
   }, []);
 
   return (
-    <section className="min-h-screen bg-technology-mobile bg-cover bg-center md:bg-technology-tablet">
+    <section className="min-h-screen bg-technology-mobile bg-cover bg-center md:bg-technology-tablet lg:bg-technology-desktop">
       <Navbar />
 
       <div className="grid">
@@ -28,20 +28,20 @@ const Technology = () => {
           <span className="mr-2 font-bold text-line">03</span>
           SPACE LAUNCH 101
         </h2>
-        <div>
+        <div className="flex-row-reverse lg:flex">
           <div className="">
             {tech.map((img) => (
               <img
-                className="w-screen object-cover object-center"
-                src={img.images.landscape}
+                className="w-screen object-cover object-center lg:w-[32.5rem]"
+                src={img.images.portrait}
                 alt=""
               />
             ))}
           </div>
 
-          <div className="mx-auto my-6 flex w-80 flex-col gap-6 text-white md:w-3/5">
+          <div className="mx-auto my-6 flex w-80 flex-col gap-6 self-center text-white md:w-3/5 lg:flex-row lg:pl-14">
             {/* TABS */}
-            <div className="mx-auto mt-8 flex w-40 items-center justify-between text-white md:w-56">
+            <div className="mx-auto mt-8 flex w-40 items-center justify-between text-white md:w-56 lg:mx-0 lg:h-1/2 lg:w-16 lg:flex-col lg:gap-8">
               {techNameArr.map((name, idx) => (
                 <button
                   className={`${
