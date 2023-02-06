@@ -41,6 +41,7 @@ const Destination = () => {
           ))}
         </div>
 
+        {/* TABS */}
         <div className="lg:w-[27.8125rem]">
           <div className="mx-auto flex h-8 w-60 justify-between text-lightBlue lg:mx-0">
             {["Moon", "Mars", "Europa", "Titan"].map((item, idx) => (
@@ -56,6 +57,7 @@ const Destination = () => {
             ))}
           </div>
 
+          {/* NAME & DESCRIPTION */}
           {destination.map((item, idx) => (
             <div className="mx-auto w-80 md:w-3/4 lg:w-full" key={idx}>
               <h1 className="my-4 text-center font-bellefair text-fs700 font-light uppercase text-white md:text-fs750 lg:text-left lg:text-fs800">

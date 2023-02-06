@@ -27,6 +27,7 @@ const Crew = () => {
   return (
     <section className="grid min-h-screen  bg-crew-mobile bg-cover bg-center text-white md:h-max md:bg-crew-tablet">
       <Navbar />
+
       <h1 className="my-2 text-center font-barlowCond text-fs300 font-light uppercase tracking-2xl text-white md:ml-8 md:text-left md:text-fs400">
         <span className="mr-2 font-bold text-line">02</span>
         Meet your crew
@@ -65,6 +66,8 @@ const Crew = () => {
               </p>
             </div>
           ))}
+
+          {/* TABS */}
           <div className="mx-auto my-6 flex w-20 justify-between lg:w-full lg:justify-start lg:gap-6">
             {members.map((member) => (
               <button
