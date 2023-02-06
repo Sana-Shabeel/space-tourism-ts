@@ -54,7 +54,7 @@ const Crew = () => {
                   {data.name}
                 </h2>
               </div>
-              <p className="my-6 text-center text-fs200 font-extralight leading-6 text-lightBlue lg:w-[27.75rem] lg:text-left">
+              <p className="lg:h-fs600 my-6 text-center text-fs200 font-extralight leading-6 text-lightBlue lg:h-24 lg:w-[27.75rem] lg:text-left">
                 {data.bio}
               </p>
             </div>
