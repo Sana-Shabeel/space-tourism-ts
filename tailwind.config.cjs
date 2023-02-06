@@ -13,6 +13,7 @@ module.exports = {
         fs700: "3.5rem",
         fs600: "2rem",
         fs500: "1.75rem",
+        fs450: "1.5rem",
         fs400: "1.125rem",
         fs300: "1rem",
         fs200: "0.875rem",
@@ -37,6 +38,12 @@ module.exports = {
         "crew-desktop": "url('/assets/crew/background-crew-desktop.jpg')",
         "crew-tablet": "url('/assets/crew/background-crew-tablet.jpg')",
         "crew-mobile": "url('/assets/crew/background-crew-mobile.jpg')",
+        "technology-desktop":
+          "url('/assets/technology/background-technology-desktop.jpg')",
+        "technology-tablet":
+          "url('/assets/technology/background-technology-tablet.jpg')",
+        "technology-mobile":
+          "url('/assets/technology/background-technology-mobile.jpg')",
       },
       fontFamily: {
         bellefair: ["Bellefair", "serif"],
