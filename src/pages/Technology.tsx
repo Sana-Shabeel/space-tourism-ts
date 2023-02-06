@@ -20,28 +20,33 @@ const Technology = () => {
   }, []);
 
   return (
-    <section className="min-h-screen bg-technology-mobile bg-cover bg-center">
+    <section className="min-h-screen bg-technology-mobile bg-cover bg-center md:bg-technology-tablet">
       <Navbar />
 
       <div className="grid">
-        <h2 className="my-8 text-center font-barlowCond text-fs300 font-light uppercase tracking-2xl text-white md:ml-8 md:text-left md:text-fs400">
+        <h2 className="my-8 text-center font-barlowCond text-fs300 font-light uppercase tracking-2xl text-white md:ml-8 md:text-left md:text-fs450">
           <span className="mr-2 font-bold text-line">03</span>
           SPACE LAUNCH 101
         </h2>
         <div>
-          <div className="image">
+          <div className="">
             {tech.map((img) => (
-              <img src={img.images.landscape} alt="" />
+              <img
+                className="w-screen object-cover object-center"
+                src={img.images.landscape}
+                alt=""
+              />
             ))}
           </div>
-          <div className="mx-auto my-6 flex w-80 flex-col gap-6 text-white">
+
+          <div className="mx-auto my-6 flex w-80 flex-col gap-6 text-white md:w-3/5">
             {/* TABS */}
-            <div className="mx-auto mt-8 flex w-40 items-center justify-between text-white">
+            <div className="mx-auto mt-8 flex w-40 items-center justify-between text-white md:w-56">
               {techNameArr.map((name, idx) => (
                 <button
                   className={`${
                     IsActive === name ? "bg-white text-dark" : ""
-                  } grid h-10 w-10 place-items-center rounded-full border border-line font-bellefair text-fs300`}
+                  } grid h-10 w-10 place-items-center gap-4 rounded-full border border-line font-bellefair text-fs300 md:h-16 md:w-16                  `}
                   onClick={() => pickTechHandler(name)}
                 >
                   {idx + 1}
@@ -52,10 +57,10 @@ const Technology = () => {
             {tech.map((item) => (
               <div>
                 <div className="text-center font-light uppercase tracking-wide lg:text-left">
-                  <h3 className="my-2 font-barlowCond text-fs200 tracking-widest text-lightBlue">
+                  <h3 className="my-2 font-barlowCond text-fs200 tracking-widest text-lightBlue md:text-fs300">
                     THE TERMINOLOGY...
                   </h3>
-                  <h2 className="font-bellefair text-fs450 md:text-fs600 lg:text-fs700">
+                  <h2 className="font-bellefair text-fs450 md:text-fs650 lg:text-fs700">
                     {item.name}
                   </h2>
                 </div>
