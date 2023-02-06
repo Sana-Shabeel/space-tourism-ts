@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 
-export const Technology = () => {
+const Technology = () => {
   return (
     <section>
       <Navbar />
@@ -10,3 +10,5 @@ export const Technology = () => {
     </section>
   );
 };
+
+export default Technology;
