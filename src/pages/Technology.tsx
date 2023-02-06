@@ -7,6 +7,7 @@ const Technology = () => {
   const [techData, setTechData] = useState<Root["technology"]>(data.technology);
   const [tech, setTech] = useState(techData);
   const [IsActive, setIsActive] = useState("");
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   const pickTechHandler = (rocket: string) => {
     setTech(techData.filter((item) => item.name === rocket));
@@ -18,6 +19,19 @@ const Technology = () => {
   useEffect(() => {
     pickTechHandler("Launch vehicle");
   }, []);
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWindowSize(window.innerWidth);
+      console.log(windowSize);
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        console.log("removed");
+      });
+    };
+  }, [windowSize]);
 
   return (
     <section className="min-h-screen bg-technology-mobile bg-cover bg-center md:bg-technology-tablet lg:bg-technology-desktop">
@@ -33,8 +47,12 @@ const Technology = () => {
             {tech.map((img) => (
               <img
                 className="w-screen object-cover object-center lg:w-[32.5rem]"
-                src={img.images.portrait}
-                alt=""
+                src={
+                  windowSize >= 1024
+                    ? img.images.portrait
+                    : img.images.landscape
+                }
+                alt={img.name}
               />
             ))}
           </div>
