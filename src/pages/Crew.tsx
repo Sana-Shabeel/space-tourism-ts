@@ -8,6 +8,12 @@ const Crew = () => {
 
   const [crewMember, setCrewMember] = useState<Root["crew"]>(crew);
   const [IsActive, setIsActive] = useState("Douglas Hurley");
+  const members = [
+    "Douglas Hurley",
+    "Mark Shuttleworth",
+    "Victor Glover",
+    "Anousheh Ansari",
+  ];
 
   const pickCrewMembers = (crewName: string) => {
     setIsActive(crewName);
@@ -50,7 +56,7 @@ const Crew = () => {
                 <h3 className="mb-2 text-fs300 text-line lg:text-fs600">
                   {data.role}
                 </h3>
-                <h2 className="text-[1.5rem] md:text-fs600 lg:text-fs700">
+                <h2 className="text-fs450 md:text-fs600 lg:text-fs700">
                   {data.name}
                 </h2>
               </div>
@@ -60,12 +66,7 @@ const Crew = () => {
             </div>
           ))}
           <div className="mx-auto my-6 flex w-20 justify-between lg:w-full lg:justify-start lg:gap-6">
-            {[
-              "Douglas Hurley",
-              "Mark Shuttleworth",
-              "Victor Glover",
-              "Anousheh Ansari",
-            ].map((member) => (
+            {members.map((member) => (
               <button
                 className={`${
                   IsActive === member ? "bg-white" : "bg-line"
