@@ -15,8 +15,6 @@ const Destination = () => {
   const [IsActive, setIsActive] = useState("Moon");
 
   const pickDestinationHandler = (planet: string) => {
-    console.log("clicked");
-
     setDestination(destinationData.filter((obj) => obj.name === planet));
     setIsActive(planet);
   };
