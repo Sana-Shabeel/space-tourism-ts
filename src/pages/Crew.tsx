@@ -35,8 +35,11 @@ const Crew = () => {
 
       <div className="md:flex md:flex-col-reverse lg:mx-auto lg:w-11/12 lg:flex-row-reverse lg:justify-around">
         {/* IMAGE */}
-        {crewMember.map((img) => (
-          <div className="my-4 mx-auto w-80 md:w-auto md:self-end lg:m-0">
+        {crewMember.map((img, idx) => (
+          <div
+            className="my-4 mx-auto w-80 md:w-auto md:self-end lg:m-0"
+            key={idx}
+          >
             <img
               className="mx-auto h-56 w-80 object-contain object-center md:h-[33.25rem] md:w-auto md:object-cover lg:w-[35rem] lg:object-contain"
               src={img.images.png}
@@ -51,8 +54,11 @@ const Crew = () => {
           className="mx-auto mt-2 flex w-80 flex-col-reverse md:w-3/5 md:flex-col 
         lg:w-[39rem]"
         >
-          {crewMember.map((data) => (
-            <div className="lg:mt-6 lg:flex lg:flex-col lg:justify-center">
+          {crewMember.map((data, idx) => (
+            <div
+              className="lg:mt-6 lg:flex lg:flex-col lg:justify-center"
+              key={idx}
+            >
               <div className="text-center font-bellefair font-light uppercase tracking-wide lg:text-left">
                 <h3 className="mb-2 text-fs300 text-line lg:text-fs600">
                   {data.role}
@@ -69,12 +75,13 @@ const Crew = () => {
 
           {/* TABS */}
           <div className="mx-auto my-6 flex w-20 justify-between lg:w-full lg:justify-start lg:gap-6">
-            {members.map((member) => (
+            {members.map((member, idx) => (
               <button
                 className={`${
                   IsActive === member ? "bg-white" : "bg-line"
                 } h-[10px] w-[10px] rounded`}
                 onClick={() => pickCrewMembers(member)}
+                key={idx}
               ></button>
             ))}
           </div>

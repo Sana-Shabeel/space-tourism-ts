@@ -34,8 +34,12 @@ const Destination = () => {
 
       <div className="lg:flex lg:justify-evenly">
         <div className="mx-auto my-10 w-44 md:my-8 md:w-[18.75rem] lg:mx-0 lg:w-[27.8125rem]">
-          {destination.map((img) => (
-            <img src={img.images.png} alt={`a picture of ${img.name}`} />
+          {destination.map((img, idx) => (
+            <img
+              key={idx}
+              src={img.images.png}
+              alt={`a picture of ${img.name}`}
+            />
           ))}
         </div>
 

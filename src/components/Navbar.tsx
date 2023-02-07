@@ -10,6 +10,8 @@ const Navbar = () => {
     console.log(target);
   };
 
+  console.log("isactive", isActive);
+
   const navbar = [
     { num: "00", title: "HOME" },
     { num: "01", title: "DESTINATION" },

@@ -44,7 +44,7 @@ const Technology = () => {
         </h2>
         <div className="flex-row-reverse lg:flex">
           <div className="">
-            {tech.map((img) => (
+            {tech.map((img, idx) => (
               <img
                 className="w-screen object-cover object-center lg:w-[32.5rem]"
                 src={
@@ -52,6 +52,7 @@ const Technology = () => {
                     ? img.images.portrait
                     : img.images.landscape
                 }
+                key={idx}
                 alt={`a picture of ${img.name}`}
               />
             ))}
@@ -66,14 +67,15 @@ const Technology = () => {
                     IsActive === name ? "bg-white text-dark" : ""
                   } grid h-10 w-10 place-items-center gap-4 rounded-full border border-line font-bellefair text-fs300 md:h-16 md:w-16                  `}
                   onClick={() => pickTechHandler(name)}
+                  key={idx}
                 >
                   {idx + 1}
                 </button>
               ))}
             </div>
             {/* INFO */}
-            {tech.map((item) => (
-              <div>
+            {tech.map((item, idx) => (
+              <div key={idx}>
                 <div className="text-center font-light uppercase tracking-wide lg:text-left">
                   <h3 className="my-2 font-barlowCond text-fs200 tracking-widest text-lightBlue md:text-fs300">
                     THE TERMINOLOGY...
