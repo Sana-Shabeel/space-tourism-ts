@@ -60,10 +60,13 @@ const Navbar = ({ border, setBorder }: Props) => {
               <ul className="mt-12 sm:ml-8 sm:mt-16">
                 {navbar.map(({ num, title }, idx) => (
                   <li key={idx} className="my-10 ml-4 text-xl tracking-3px">
-                    <a href={`#${title}`} className="font-extralight">
+                    <Link
+                      to={`/${title.toLowerCase()}`}
+                      className="font-extralight"
+                    >
                       <span className="mr-4 font-semibold">{num}</span>
                       {title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
