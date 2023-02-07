@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 
 const Landing = () => {
+  const [border, setBorder] = useState("00");
+
   return (
     <section className="grid min-h-screen grid-rows-home bg-home-page-mobile bg-cover bg-center text-lightBlue sm:bg-home-page-tablet lg:bg-home-page-desktop">
-      <Navbar />
+      <Navbar border={border} setBorder={setBorder} />
       <div className="flex h-full flex-col pt-6 lg:flex-row">
         <div className="m-auto w-80 md:w-3/5 lg:w-[28.125rem]">
           <h1 className="text-center font-barlowCond text-fs400 tracking-h1space lg:text-left">

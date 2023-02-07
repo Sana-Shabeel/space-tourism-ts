@@ -1,16 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+interface Props {
+  border: string;
+  setBorder: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Navbar = ({ border, setBorder }: Props) => {
   const [toggleNavbar, setToggleNavbar] = useState<boolean>(false);
-  const [isActive, setIsActive] = useState("00");
-
-  const activeHandler = (target: string) => {
-    setIsActive(target);
-    console.log(target);
-  };
-
-  console.log("isactive", isActive);
 
   const navbar = [
     { num: "00", title: "HOME" },
@@ -28,12 +25,14 @@ const Navbar = () => {
         <ul className="hidden h-full w-3/5 items-center justify-around gap-6 bg-alphaWhite px-12 backdrop-blur-lg  md:flex lg:w-2/3	">
           {navbar.map(({ num, title }, idx) => (
             <li
-              className={` flex h-full items-center justify-center border-white text-lg font-extralight tracking-widest hover:border-b-2 hover:border-stone-400`}
+              className={`${
+                border === num ? "border-b-2" : ""
+              } flex h-full items-center justify-center border-white text-lg font-extralight tracking-widest hover:border-b-2 hover:border-stone-400`}
               key={idx}
             >
               <Link
                 to={`/${title.toLowerCase()}`}
-                onClick={() => activeHandler(num)}
+                onClick={() => setBorder(num)}
               >
                 <span className="mr-3 font-bold md:hidden lg:inline-block">
                   {num}

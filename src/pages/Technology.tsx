@@ -7,6 +7,7 @@ const Technology = () => {
   const [techData, setTechData] = useState<Root["technology"]>(data.technology);
   const [tech, setTech] = useState(techData);
   const [IsActive, setIsActive] = useState("");
+  const [border, setBorder] = useState("03");
   const [windowSize, setWindowSize] = useState(window.innerWidth);
 
   const pickTechHandler = (rocket: string) => {
@@ -35,7 +36,7 @@ const Technology = () => {
 
   return (
     <section className="min-h-screen bg-technology-mobile bg-cover bg-center md:bg-technology-tablet lg:bg-technology-desktop">
-      <Navbar />
+      <Navbar border={border} setBorder={setBorder} />
 
       <div className="grid">
         <h2 className="my-8 text-center font-barlowCond text-fs300 font-light uppercase tracking-2xl text-white md:ml-8 md:text-left md:text-fs450">

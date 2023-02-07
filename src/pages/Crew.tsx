@@ -5,9 +5,9 @@ import Navbar from "../components/Navbar";
 
 const Crew = () => {
   const [crewData, setCrewData] = useState<Root["crew"]>(crew);
-
   const [crewMember, setCrewMember] = useState<Root["crew"]>(crew);
   const [IsActive, setIsActive] = useState("Douglas Hurley");
+  const [border, setBorder] = useState("02");
   const members = [
     "Douglas Hurley",
     "Mark Shuttleworth",
@@ -26,7 +26,7 @@ const Crew = () => {
 
   return (
     <section className="grid min-h-screen  bg-crew-mobile bg-cover bg-center text-white md:h-max md:bg-crew-tablet">
-      <Navbar />
+      <Navbar border={border} setBorder={setBorder} />
 
       <h1 className="my-2 text-center font-barlowCond text-fs300 font-light uppercase tracking-2xl text-white md:ml-8 md:text-left md:text-fs400">
         <span className="mr-2 font-bold text-line">02</span>

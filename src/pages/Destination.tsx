@@ -13,6 +13,7 @@ const Destination = () => {
     useState<Root["destinations"]>(destinationData);
 
   const [IsActive, setIsActive] = useState("Moon");
+  const [border, setBorder] = useState("01");
 
   const pickDestinationHandler = (planet: string) => {
     setDestination(destinationData.filter((obj) => obj.name === planet));
@@ -25,7 +26,7 @@ const Destination = () => {
 
   return (
     <section className="min-h-screen bg-destination-mobile bg-cover bg-center sm:bg-destination-tablet  lg:bg-destination-desktop ">
-      <Navbar />
+      <Navbar border={border} setBorder={setBorder} />
 
       <h2 className="my-10 text-center font-barlowCond text-fs300 font-light uppercase tracking-2xl text-white md:ml-8 md:text-left md:text-fs400">
         <span className="mr-2 font-bold text-line">01</span>
