@@ -7,7 +7,7 @@ import Technology from "./pages/Technology";
 
 function App() {
   return (
-    <main>
+    <main className="m-h-screen bg-black">
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/home" element={<Homepage />} />
